@@ -5,3 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+ 
+ 
+Temperature.create!(sensor_voltage: 50.00, celcius: 17.00) 
+Temperature.create!(sensor_voltage: 51.00, celcius: 17.50) 

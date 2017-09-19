@@ -1,17 +1,23 @@
 class TemperaturesController < ApplicationController
   
-  def create
+  def create  
+    temp = Temperature.new(temp_params) 
+    if temp.save 
+      render json: temp, status: 201, location: temp
+    else
+    end 
   end
   
   def index  
-    temperatures = Temperature.all
+    #Last 30 days of data based on 1 measurement per minute of data.
+    temperatures = Temperature.last(43200)
     render json: temperatures, status: 200
   end
-  
   
   private 
     
   def temp_params
-    
-  end
+    params.require(:temperature).permit(:sensor_voltage, :celcius)
+  end 
+  
 end
