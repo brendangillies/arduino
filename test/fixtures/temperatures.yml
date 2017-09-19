@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sensor_voltage: 1.5
+  celcius: 1.5
+
+two:
+  sensor_voltage: 1.5
+  celcius: 1.5
