@@ -4,7 +4,8 @@ class TemperaturesController < ApplicationController
     temp = Temperature.new(temp_params) 
     if temp.save 
       render json: temp, status: 201, location: temp
-    else
+    else 
+      render json: temp.errors, status: 422, location: temp
     end 
   end
   
