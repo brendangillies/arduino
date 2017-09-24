@@ -1,4 +1,6 @@
-<h1>Temperature Log</h1> 
+<h1>Temperature Log</h1>  
+<p><strong>Total Measurements:</strong> <%= @temps.count %></p> 
+<p><strong>Last Measurement:</strong> <%= @temps.last.created_at.to_formatted_s(:long)%></p>
 <table border="0" cellspacing="5" cellpadding="5">
 	<tr>
 		<th>Time</th>
