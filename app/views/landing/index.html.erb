@@ -1,0 +1,13 @@
+<h1>Temperature Log</h1> 
+<table border="0" cellspacing="5" cellpadding="5">
+	<tr>
+		<th>Time</th>
+		<th>Celcius</th>
+	</tr>
+	<% @temps.each do |temp| %>
+	<tr>
+		<td><%= temp.created_at.to_formatted_s(:long)%></td>
+		<td><%= temp.celcius%></td>
+	</tr>
+	<% end %>
+</table>
